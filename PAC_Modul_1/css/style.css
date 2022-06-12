@@ -116,6 +116,19 @@ nav .menu{
     
 }
 
+/*Pàgina contacte*/ 
+/*Formularis*/
+#contacte form {
+    margin-left: 500px;
 
+}
+input[type="submit"]{
+   margin-left: 200px;
+}
 
-
+input[type="text"]{
+    width: 30rem;
+ }
+ textarea{
+    width: 30rem;
+ }
