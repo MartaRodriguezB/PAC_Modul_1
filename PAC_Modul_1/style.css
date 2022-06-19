@@ -1,0 +1,251 @@
+/*Capçalera i peu de pàgina de tot el projecte*/
+body{
+    margin: 0;
+    display: block;
+}
+
+header, footer, nav{
+    background-color: #222222;
+}
+
+/*Característiques generals de les etiquetes*/
+h1{
+    font-size: 2.5rem;;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    padding: .5rem;
+}
+
+/*Menú per tot el projecte*/
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+.menus{
+    display: flex;
+    gap: 1rem;
+}
+.menus>a{
+    color: white;
+    text-decoration: none;
+ }
+.icon_home>img{
+    width: 1.5rem;
+    padding: auto;
+}
+
+/*Capçalera de tot el projecte */
+.cabecera{
+    background-image: url('assets/Mar1.jpeg');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 23rem;
+    text-shadow: 0px 0px 12px black;
+}
+
+ /*Logos peu de pàgina*/
+ .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/*CV: color de fons per les diferents seccions*/
+.divisio:nth-child(2n+1){
+    background-color: rgb(205, 201, 201);
+}
+/*CV:Sumari*/
+.sumari{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:1.5rem;
+}
+ .sumari>img{
+    width: 1.5rem;
+ }
+.sumari>a{
+    text-decoration: none;
+}
+/*CV:Dades personals*/
+.dades_personals>p{
+    text-align: left;
+    margin-left: 25rem;
+}
+.fotografia{
+    position: absolute;
+    transform: translate(600%, -120%);
+}
+.fotografia img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+/*CV: taula idiomes*/
+table, th, td{
+    margin: 0 auto;  
+    border: 1px solid;
+    text-align: center;
+}
+
+/*Marge de les seecions amb ul li*/
+.llista ul li {
+    margin-left: 20rem;
+}
+
+/*Pàgina contacte*/ 
+/*Pàgina contacte: formularis*/
+.contacte{
+    display: flex;
+    flex-direction: row;
+}
+.formularis{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+}
+input[type="text"]{
+    width: 30rem;
+    border: .08rem solid rgb(178, 171, 171);
+}
+textarea{
+    width: 30rem;
+    border: .08rem solid rgb(178, 171, 171);
+}
+input[type="submit"]{
+  width: 5vw;
+  margin: 1rem auto;
+  border: .1rem solid rgb(96, 94, 94);
+  background-color: #FFFFFF;
+}
+ /*Pàgina principal*/
+ /*Pàgina principal: secció presentació, text*/
+ .presentacio_text{
+    display: flex;
+    width: 90vw;
+    margin: 0 auto;
+    gap:5rem;  
+    text-align: justify;
+}
+/*Pàgina principal: secció presentació, imatge*/
+.presentacio_text>img{
+    height: 17vw;
+}
+/*Pàgina principal: secció projectes*/
+.projectes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: 0 auto;
+    gap:4rem;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    border: 2px solid #222;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 8px #222222;
+    overflow: auto;
+}
+/*Pàgina principal: secció projectes. Espai de text*/
+.project>p {
+    padding: 1.2rem;
+    block-size: 2rem;
+    text-align: justify;
+}
+/*Pàgina principal: secció projectes. Butó*/
+.project>button{
+    margin: 2rem;
+    padding: 1rem;
+    background-color:  #222222;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+/*Pàgina principal: secció projectes. Imatge*/
+.project>img{
+    height: 15vw;
+}
+/*Pàgina principal:secció experiència. Color de la secció*/
+.cat_experiencia{
+    background-color: #222222;
+}
+/*Pàgina principal:secció experiència. Títol específic de la secció*/
+.cat_experiencia>h2{
+    color: white;
+    padding: 2rem;
+}
+/*Pàgina principal:secció experiència.*/
+.experiencia{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100vw;
+}
+/*Pàgina principal:secció experiència. Imatges*/
+.figura{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem;
+}
+/*Pàgina principal:secció experiència. Espai de text*/
+.figura>p{
+    color: #FFFFFF;
+    font-size: 2rem;
+    position: absolute;
+    align-items: center;
+    margin: 9rem;
+}
+/*Pàgina principal: aficions*/
+.aficions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 70vw;
+}
+/*Pàgina principal: aficions. Quadre gris amb informació*/
+.quadre_gris{
+    display: flex;
+    background-color:#D9D9D9 ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    border: 0.1rem solid grey;
+    height: 3rem;
+    width: 16rem;
+}
+.quadre_gris>img{
+    width: 2rem;
+    padding: 1rem;
+}
+.quadre_gris>p{
+    margin: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
