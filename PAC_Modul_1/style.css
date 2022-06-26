@@ -1,14 +1,31 @@
 /*Capçalera i peu de pàgina de tot el projecte*/
 body{
-    margin: 0;
-    display: block;
+    margin: 0;  
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'imatge'
+    'text'
+    'peu';
 }
-
+/*Grid a aplicar a totes les pàgines*/
+header{
+    grid-area: top;
+}
+.cabecera{
+    grid-area: imatge;
+}
+.contingut{
+    grid-area: text;
+}
+footer{
+    grid-area: peu;
+}
+/*Característiques generals de les etiquetes*/
 header, footer, nav{
     background-color: #222222;
 }
-
-/*Característiques generals de les etiquetes*/
 h1{
     font-size: 2.5rem;;
 }
@@ -25,10 +42,13 @@ header {
     flex-direction: row;
     align-items: center;
     padding: 1rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .menus{
     display: flex;
-    gap: 1rem;
+    gap: 1rem;    
 }
 .menus>a{
     color: white;
@@ -43,7 +63,7 @@ header {
 .cabecera{
     background-image: url('assets/Mar1.jpeg');
     background-size: 100vw;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -51,71 +71,87 @@ header {
     height: 23rem;
     text-shadow: 0px 0px 12px black;
 }
-
+/*Peu de pàgina*/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
  /*Logos peu de pàgina*/
- .logos {
+.logos {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 2rem;
     gap: 2rem;
+    padding: 2rem;
 }
 
-/*CV: color de fons per les diferents seccions*/
+/*CV*/
+/*Color de fons per les diferents seccions*/
 .divisio:nth-child(2n+1){
     background-color: rgb(205, 201, 201);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
 }
-/*CV:Sumari*/
+/*Sumari*/
 .sumari{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap:1.5rem;
+    flex-wrap: wrap;
 }
- .sumari>img{
-    width: 1.5rem;
- }
-.sumari>a{
+.item{
+    display:flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.item>img{
+    width: 2rem;
+}
+.item>a{
     text-decoration: none;
+    padding: .5rem;
 }
-/*CV:Dades personals*/
-.dades_personals>p{
-    text-align: left;
-    margin-left: 25rem;
+/*Dades personals*/
+.dades{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
-.fotografia{
-    position: absolute;
-    transform: translate(600%, -120%);
+.dades>p{
+    place-self: center;
 }
-.fotografia img{
+.dades>img{
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
+    place-self: left;
+    padding: 2rem;
 }
-/*CV: taula idiomes*/
+/*Taula idiomes*/
 table, th, td{
     margin: 0 auto;  
     border: 1px solid;
     text-align: center;
 }
-
-/*Marge de les seecions amb ul li*/
-.llista ul li {
-    margin-left: 20rem;
+/*Marge de les seccions amb ul li*/
+.llista{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
 }
-
+.llista>ul{
+    padding-left: 10rem;
+}
 /*Pàgina contacte*/ 
-/*Pàgina contacte: formularis*/
+/*Formularis*/
 .contacte{
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
 }
 .formularis{
-    display: flex;
-    flex-direction: column;
     margin:0 auto;
 }
-input[type="text"]{
+input[type='text']{
     width: 30rem;
     border: .08rem solid rgb(178, 171, 171);
 }
@@ -123,33 +159,35 @@ textarea{
     width: 30rem;
     border: .08rem solid rgb(178, 171, 171);
 }
+input[type='checkbox']{
+  margin: 0;
+}
 input[type="submit"]{
   width: 5vw;
   margin: 1rem auto;
   border: .1rem solid rgb(96, 94, 94);
   background-color: #FFFFFF;
 }
+
  /*Pàgina principal*/
- /*Pàgina principal: secció presentació, text*/
- .presentacio_text{
-    display: flex;
-    width: 90vw;
-    margin: 0 auto;
-    gap:5rem;  
+ /*Secció presentació, text*/
+ .presentacio{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
     text-align: justify;
-}
-/*Pàgina principal: secció presentació, imatge*/
-.presentacio_text>img{
-    height: 17vw;
-}
-/*Pàgina principal: secció projectes*/
+ }
+
+/*Secció projectes*/
 .projectes{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    align-items: center;
     width: 70vw;
     margin: 0 auto;
     gap:4rem;
+    padding-bottom: 2rem;
 }
 .project{
     display: flex;
@@ -160,13 +198,13 @@ input[type="submit"]{
     box-shadow: 0px 0px 8px #222222;
     overflow: auto;
 }
-/*Pàgina principal: secció projectes. Espai de text*/
+/*Secció projectes. Espai de text*/
 .project>p {
     padding: 1.2rem;
     block-size: 2rem;
     text-align: justify;
 }
-/*Pàgina principal: secció projectes. Butó*/
+/*Secció projectes. Butó*/
 .project>button{
     margin: 2rem;
     padding: 1rem;
@@ -174,42 +212,42 @@ input[type="submit"]{
     border-radius: 6px;
     color: #FFFFFF;
 }
-/*Pàgina principal: secció projectes. Imatge*/
+/*Imatge*/
 .project>img{
     height: 15vw;
 }
-/*Pàgina principal:secció experiència. Color de la secció*/
+/*Secció experiència. Color de la secció*/
 .cat_experiencia{
     background-color: #222222;
 }
-/*Pàgina principal:secció experiència. Títol específic de la secció*/
+/*Títol específic de la secció*/
 .cat_experiencia>h2{
     color: white;
     padding: 2rem;
 }
-/*Pàgina principal:secció experiència.*/
+/*Secció experiència.*/
 .experiencia{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    width: 100vw;
 }
-/*Pàgina principal:secció experiència. Imatges*/
+/*Secció experiència. Imatges*/
 .figura{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3.5rem;
+    padding: 1.5rem;
+    justify-self: center;
 }
-/*Pàgina principal:secció experiència. Espai de text*/
+/*Secció experiència. Espai de text*/
 .figura>p{
     color: #FFFFFF;
     font-size: 2rem;
     position: absolute;
-    align-items: center;
-    margin: 9rem;
+    margin: 5.5rem 5.5rem;
 }
-/*Pàgina principal: aficions*/
+.figura>img{
+    height: 15rem;
+}
+
+/*Aficions*/
 .aficions{
     display: flex;
     flex-wrap: wrap;
@@ -217,7 +255,7 @@ input[type="submit"]{
     margin: 0 auto;
     width: 70vw;
 }
-/*Pàgina principal: aficions. Quadre gris amb informació*/
+/*Aficions. Quadre gris amb informació*/
 .quadre_gris{
     display: flex;
     background-color:#D9D9D9 ;
@@ -235,6 +273,341 @@ input[type="submit"]{
 .quadre_gris>p{
     margin: 2rem;
 }
+
+/*Media queries*/
+@media only screen and (max-width:992px){
+    body{
+        margin: 0;  
+        display: grid;
+        grid-template-areas: 
+        'top'
+        'imatge'
+        'text'
+        'peu';
+    }
+    header{
+        height: 1rem;
+    }
+    .cabecera{  
+        height: 7rem;
+    }
+    h2{
+        text-align: center;
+        font-weight: bold;
+    }
+    footer{
+        height: 3rem;
+    }
+    .logos {
+        padding: 0rem;
+    }
+    /*Index*/
+    /*Secció presentació*/
+    .presentacio{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .presentacio_text{
+        margin: .5rem;
+    }
+    .presentacio_imatge{
+        justify-self: center;
+    }
+    /*Projectes*/
+    .project>p {
+        padding: .5rem;
+        block-size: 1.2rem;
+        text-align: justify;
+    }
+    .project>img{
+        height: 25vw;
+    }
+    .project>button{
+        margin-bottom: .5rem;
+        padding: .5rem;
+    }
+    /*Experiencia*/
+    .cat_experiencia>h2{
+        color: white;
+        margin: 0;
+        padding: 0;
+        padding-top: .5rem;
+    }
+    .aficions{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .figura>p{
+        color: #FFFFFF;
+        font-size: .9rem;
+        position: absolute;
+        align-items: center;
+        margin: 7rem 4rem;
+    }
+    .experiencia{
+        gap: .05rem;
+    }
+    .figura>img{
+        width: 10rem;
+        padding: .1rem;
+    }
+    /*CV*/
+    .llista{
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+     .llista>ul{
+        padding-left: 1rem;
+     }
+     /*Pàgina contacte*/
+     input[type="text"]{
+        width: 95vw;
+        border: .08rem solid rgb(178, 171, 171);
+    }
+    textarea{
+        width: 95vw;
+        border: .08rem solid rgb(178, 171, 171);
+    }
+    input[type="submit"]{
+        width: 15vw;
+        margin: .1rem auto;
+        border: .1rem solid rgb(96, 94, 94);
+        background-color: #FFFFFF;
+    }
+}
+@media only screen and (max-width: 768px){
+    body{
+        margin: 0;  
+        display: grid;
+        grid-template-areas: 
+        'top'
+        'imatge'
+        'text'
+        'peu';
+    }
+    header{
+        height: 1rem;
+    }
+    .cabecera{  
+        height: 7rem;
+    }
+    h2{
+        text-align: center;
+        font-weight: bold;
+    }
+    footer{
+        height: 3rem;
+    }
+    .logos {
+        padding: 0rem;
+    }
+    /*Index*/
+    /*Presentacio*/
+    .presentacio{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .presentacio_text{
+        margin: .5rem;
+    }
+    .presentacio_imatge{
+        justify-self: center;
+    }
+    /*Projectes*/
+    .projectes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .project{
+        justify-self: center;
+        width: 60vw;
+    }
+    .project>p {
+        padding: .5rem;
+        block-size: 1.2rem;
+        text-align: justify;
+    }
+    .project>img{
+        height: 25vw;
+    }
+    .project>button{
+        margin-bottom: .5rem;
+        padding: .5rem;
+    }
+    /*Experiència*/
+    .cat_experiencia>h2{
+        color: white;
+        margin: 0;
+        padding: 0;
+        padding-top: .5rem;
+    }
+    .experiencia{
+        gap: .05rem;
+    }
+    .figura>p{
+        color: #FFFFFF;
+        font-size: .9rem;
+        position: absolute;
+        align-items: center;
+        margin: 7rem 4rem;
+    }
+    .figura>img{
+        width: 10rem;
+        padding: .1rem;
+    }
+    /*Aficions*/
+    .aficions{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /*CV*/
+    .llista{
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+     .llista>ul{
+        padding-left: 1rem;
+     }
+     /*Pàgina contacte*/
+     input[type="text"]{
+        width: 95vw;
+        border: .08rem solid rgb(178, 171, 171);
+    }
+    textarea{
+        width: 95vw;
+        border: .08rem solid rgb(178, 171, 171);
+    }
+    input[type="submit"]{
+        width: 15vw;
+        margin: .1rem auto;
+        border: .1rem solid rgb(96, 94, 94);
+        background-color: #FFFFFF;
+    }
+}
+/*Media queries*/
+@media only screen and (max-width: 600px){
+    body{
+        margin: 0;  
+        display: grid;
+        grid-template-areas: 
+        'top'
+        'text'
+        'peu';
+    }
+    .cabecera{
+        display: none;
+    }
+    h2{
+        text-align: center;
+        font-weight: bold;
+    }
+    /*Index*/
+    /*Presentacio*/
+    .presentacio{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .presentacio_text{
+        margin: .5rem;
+    }
+    .presentacio_imatge{
+        justify-self: center;
+    }
+    /*Projectes*/
+    .projectes{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .project{
+        justify-self: center;
+        width: 60vw;
+    }
+    .project>p {
+        padding: .5rem;
+        block-size: 1.2rem;
+        text-align: justify;
+    }
+    .project>img{
+        height: 25vw;
+    }
+    .project>button{
+        margin-bottom: .5rem;
+        padding: .5rem;
+    }
+    /*Experiència*/
+    .cat_experiencia>h2{
+        color: white;
+        margin: 0;
+        padding: 0;
+        padding-top: .5rem;
+    }
+    .experiencia{
+        gap: .05rem;
+    }
+    .figura>p{
+        color: #FFFFFF;
+        font-size: .9rem;
+        position: absolute;
+        align-items: center;
+        margin: 7rem 2rem;
+    }
+    .figura>img{
+        width: 6rem;
+        padding: .1rem;
+    }
+    /*Aficions*/
+    .aficions{
+        display: grid;
+        grid-template-columns: 1fr ;
+
+    }
+    /*CV*/
+    .sumari{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .item{
+        padding: 0;  
+        justify-self: center;
+        padding: .1rem;
+    }
+    .item>a{
+        padding:0;
+    }
+    .divisio{
+        padding:.5rem ;
+    }
+    .dades>img{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        place-self: left;
+    }
+    .llista{
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+     .llista>ul{
+        padding-left: 1rem;
+     }
+     /*Pàgina contacte*/
+     input[type="text"]{
+        width: 95vw;
+        border: .08rem solid rgb(178, 171, 171);
+    }
+    textarea{
+        width: 95vw;
+        border: .08rem solid rgb(178, 171, 171);
+    }
+    input[type="submit"]{
+        width: 15vw;
+        margin: .1rem auto;
+        border: .1rem solid rgb(96, 94, 94);
+        background-color: #FFFFFF;
+    }
+}
+
+
 
 
 

@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="cv_contacte">
     <header>
-        <a href="#" class="icon_home">
+        <a href="index.html" class="icon_home">
             <img src="assets/Home.svg" alt="home"/>
         </a> 
         <nav class="menus">
@@ -21,22 +24,24 @@
     <section class="cabecera"> 
         <h1>Contacte</h1>
     </section>  
-    <section>
-        <h2>Parlem!</h2>
-        <article class="contacte">
-            <form class="formularis">
-                <label for="nom">Nom</label><br>
-                <input type="text" id="nom"><br>
-                <label for="email">Correu electrònic</label><br>
-                <input type="text" id="email"><br>
-                <label for="comentaris">Comentaris</label><br>
-                <textarea name="comentaris" rows="10" cols="30"></textarea><br><br>
-                <input type="checkbox" id="normes" name="missatge">
-                <label for="missatge">He llegit i accepto <a href="politica">la política de privacitat</a></label><br><br>
-                <input type="submit">
-            </form>
-        </article>
-    </section>
+    <div class="contingut">
+        <section>
+            <h2>Parlem!</h2>
+            <article class="contacte">
+                <form class="formularis">
+                    <label for="nom">Nom</label><br>
+                    <input type="text" id="nom"><br>
+                    <label for="email">Correu electrònic</label><br>
+                    <input type="text" id="email"><br>
+                    <label for="comentaris">Comentaris</label><br>
+                    <textarea name="comentaris" rows="10" cols="30"></textarea><br><br>
+                    <input type="checkbox" id="normes" name="missatge">
+                    <label for="missatge">He llegit i accepto <a href="politica">la política de privacitat</a></label><br><br>
+                    <input type="submit">
+                </form>
+           </article>
+        </section>
+    </div>   
     <footer>
         <div class="logos">
             <img src="assets/twitter.svg" alt="twitter"/>
