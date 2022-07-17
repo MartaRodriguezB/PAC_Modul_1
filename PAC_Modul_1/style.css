@@ -1,624 +1,616 @@
 /*Capçalera i peu de pàgina de tot el projecte*/
-body{
-    margin: 0;  
-    font-family: 'Inter', sans-serif;
-    display: grid;
-    grid-template-areas: 
-    'top'
-    'imatge'
-    'text'
-    'peu';
+body {
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	display: grid;
+	grid-template-areas:
+		'top'
+		'imatge'
+		'text'
+		'peu';
 }
 /*Grid a aplicar a totes les pàgines*/
-header{
-    grid-area: top;
+
+/* acotumbrate a poner siempre primero las etiquetas sin clases, luego las con clases y por ultimo las media queries
+es para mejor lectura del código. */
+
+header {
+	grid-area: top;
 }
-.cabecera{
-    grid-area: imatge;
+/* siempre un espacio entre regla y regla */
+.cabecera {
+	grid-area: imatge;
 }
-.contingut{
-    grid-area: text;
+.contingut {
+	grid-area: text;
 }
-footer{
-    grid-area: peu;
+footer {
+	grid-area: peu;
 }
 /*Característiques generals de les etiquetes*/
-header, footer, nav{
-    background-color: #222222;
+header,
+footer,
+nav {
+	background-color: #222222;
 }
-h1{
-    font-size: 2.5rem;;
+h1 {
+	font-size: 2.5rem;
 }
-h2{
-    text-align: center;
-    font-weight: bold;
-    padding: .5rem;
+h2 {
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5rem;
 }
 
 /*Menú per tot el projecte*/
 header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	padding: 1rem 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
-.menus{
-    display: flex;
-    gap: 1rem;    
+.menus {
+	display: flex;
+	gap: 1rem;
 }
-.menus>a{
-    color: white;
-    text-decoration: none;
- }
-.icon_home>img{
-    width: 1.5rem;
-    padding: auto;
+.menus > a {
+	color: white;
+	text-decoration: none;
+}
+.icon_home > img {
+	width: 1.5rem;
+	padding: auto;
 }
 
 /*Capçalera de tot el projecte */
-.cabecera{
-    background-image: url('assets/Mar1.jpeg');
-    background-size: 100vw;
-    background-repeat: repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 23rem;
-    text-shadow: 0px 0px 12px black;
+.cabecera {
+	background-image: url('assets/Mar1.jpeg');
+	background-size: 100vw;
+	background-repeat: repeat;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 23rem;
+	text-shadow: 0px 0px 12px black;
 }
 /*Peu de pàgina*/
-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
- /*Logos peu de pàgina*/
+/*Logos peu de pàgina*/
 .logos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 2rem;
+	padding: 2rem;
 }
 
 /*CV*/
 /*Color de fons per les diferents seccions*/
-.divisio:nth-child(2n+1){
-    background-color: rgb(205, 201, 201);
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2rem;
+.divisio:nth-child(2n + 1) {
+	background-color: rgb(205, 201, 201);
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 2rem;
 }
 /*Sumari*/
-.sumari{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+.sumari {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
-.item{
-    display:flex;
-    justify-content: center;
-    padding: 1rem;
+.item {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
 }
-.item>img{
-    width: 2rem;
+.item > img {
+	width: 2rem;
 }
-.item>a{
-    text-decoration: none;
-    padding: .5rem;
+.item > a {
+	text-decoration: none;
+	padding: 0.5rem;
 }
 /*Dades personals*/
-.dades{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+.dades {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 }
-.dades>p{
-    place-self: center;
+.dades > p {
+	place-self: center;
 }
-.dades>img{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    place-self: left;
-    padding: 2rem;
+.dades > img {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	place-self: left;
+	padding: 2rem;
 }
 /*Taula idiomes*/
-table, th, td{
-    margin: 0 auto;  
-    border: 1px solid;
-    text-align: center;
+table,
+th,
+td {
+	margin: 0 auto;
+	border: 1px solid;
+	text-align: center;
 }
 /*Marge de les seccions amb ul li*/
-.llista{
-   display: grid;
-   grid-template-columns: 2fr 1fr;
+.llista {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 }
-.llista>ul{
-    padding-left: 10rem;
+.llista > ul {
+	padding-left: 10rem;
 }
-/*Pàgina contacte*/ 
+/*Pàgina contacte*/
 /*Formularis*/
-.contacte{
-    display: flex;
-    flex-direction:column;
+.contacte {
+	display: flex;
+	flex-direction: column;
 }
-.formularis{
-    margin:0 auto;
+.formularis {
+	margin: 0 auto;
 }
-input[type='text']{
-    width: 30rem;
-    border: .08rem solid rgb(178, 171, 171);
+input[type='text'] {
+	width: 30rem;
+	border: 0.08rem solid rgb(178, 171, 171);
 }
-textarea{
-    width: 30rem;
-    border: .08rem solid rgb(178, 171, 171);
+textarea {
+	width: 30rem;
+	border: 0.08rem solid rgb(178, 171, 171);
 }
-input[type='checkbox']{
-  margin: 0;
+input[type='checkbox'] {
+	margin: 0;
 }
-input[type="submit"]{
-  width: 5vw;
-  margin: 1rem auto;
-  border: .1rem solid rgb(96, 94, 94);
-  background-color: #FFFFFF;
+input[type='submit'] {
+	width: 5vw;
+	margin: 1rem auto;
+	border: 0.1rem solid rgb(96, 94, 94);
+	background-color: #ffffff;
 }
 
- /*Pàgina principal*/
- /*Secció presentació, text*/
- .presentacio{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    text-align: justify;
- }
+/*Pàgina principal*/
+/*Secció presentació, text*/
+.presentacio {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 1rem;
+	padding: 1rem;
+	text-align: justify;
+}
 
 /*Secció projectes*/
-.projectes{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    width: 70vw;
-    margin: 0 auto;
-    gap:4rem;
-    padding-bottom: 2rem;
+.projectes {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	width: 70vw;
+	margin: 0 auto;
+	gap: 4rem;
+	padding-bottom: 2rem;
 }
-.project{
-    display: flex;
-    flex-direction: column;
-    width: 25vw;
-    border: 2px solid #222;
-    border-radius: 1.5rem;
-    box-shadow: 0px 0px 8px #222222;
-    overflow: auto;
+.project {
+	display: flex;
+	flex-direction: column;
+	width: 25vw;
+	border: 2px solid #222;
+	border-radius: 1.5rem;
+	box-shadow: 0px 0px 8px #222222;
+	overflow: auto;
 }
 /*Secció projectes. Espai de text*/
-.project>p {
-    padding: 1.2rem;
-    block-size: 2rem;
-    text-align: justify;
+.project > p {
+	padding: 1.2rem;
+	block-size: 2rem;
+	text-align: justify;
 }
 /*Secció projectes. Butó*/
-.project>button{
-    margin: 2rem;
-    padding: 1rem;
-    background-color:  #222222;
-    border-radius: 6px;
-    color: #FFFFFF;
+.project > button {
+	margin: 2rem;
+	padding: 1rem;
+	background-color: #222222;
+	border-radius: 6px;
+	color: #ffffff;
 }
 /*Imatge*/
-.project>img{
-    height: 15vw;
+.project > img {
+	height: 15vw;
 }
 /*Secció experiència. Color de la secció*/
-.cat_experiencia{
-    background-color: #222222;
+.cat_experiencia {
+	background-color: #222222;
 }
 /*Títol específic de la secció*/
-.cat_experiencia>h2{
-    color: white;
-    padding: 2rem;
+.cat_experiencia > h2 {
+	color: white;
+	padding: 2rem;
 }
 /*Secció experiència.*/
-.experiencia{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+.experiencia {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem;
 }
 /*Secció experiència. Imatges*/
-.figura{
-    padding: 1.5rem;
-    justify-self: center;
+.figura {
+	padding: 1.5rem;
+	justify-self: center;
 }
 /*Secció experiència. Espai de text*/
-.figura>p{
-    color: #FFFFFF;
-    font-size: 2rem;
-    position: absolute;
-    margin: 5.5rem 5.5rem;
+.figura > p {
+	color: #ffffff;
+	font-size: 2rem;
+	position: absolute;
+	margin: 5.5rem 5.5rem;
 }
-.figura>img{
-    height: 15rem;
+.figura > img {
+	height: 15rem;
 }
 
 /*Aficions*/
-.aficions{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    width: 70vw;
+.aficions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: 70vw;
 }
 /*Aficions. Quadre gris amb informació*/
-.quadre_gris{
-    display: flex;
-    background-color:#D9D9D9 ;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem;
-    border: 0.1rem solid grey;
-    height: 3rem;
-    width: 16rem;
+.quadre_gris {
+	display: flex;
+	background-color: #d9d9d9;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem;
+	border: 0.1rem solid grey;
+	height: 3rem;
+	width: 16rem;
 }
-.quadre_gris>img{
-    width: 2rem;
-    padding: 1rem;
+.quadre_gris > img {
+	width: 2rem;
+	padding: 1rem;
 }
-.quadre_gris>p{
-    margin: 2rem;
+.quadre_gris > p {
+	margin: 2rem;
 }
 
 /*Media queries*/
-@media only screen and (max-width:992px){
-    body{
-        margin: 0;  
-        display: grid;
-        grid-template-areas: 
-        'top'
-        'imatge'
-        'text'
-        'peu';
-    }
-    header{
-        height: 1rem;
-    }
-    .cabecera{  
-        height: 7rem;
-    }
-    h2{
-        text-align: center;
-        font-weight: bold;
-    }
-    footer{
-        height: 3rem;
-    }
-    .logos {
-        padding: 0rem;
-    }
-    /*Index*/
-    /*Secció presentació*/
-    .presentacio{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .presentacio_text{
-        margin: .5rem;
-    }
-    .presentacio_imatge{
-        justify-self: center;
-    }
-    /*Projectes*/
-    .project>p {
-        padding: .5rem;
-        block-size: 1.2rem;
-        text-align: justify;
-    }
-    .project>img{
-        height: 25vw;
-    }
-    .project>button{
-        margin-bottom: .5rem;
-        padding: .5rem;
-    }
-    /*Experiencia*/
-    .cat_experiencia>h2{
-        color: white;
-        margin: 0;
-        padding: 0;
-        padding-top: .5rem;
-    }
-    .aficions{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .figura>p{
-        color: #FFFFFF;
-        font-size: .9rem;
-        position: absolute;
-        align-items: center;
-        margin: 7rem 4rem;
-    }
-    .experiencia{
-        gap: .05rem;
-    }
-    .figura>img{
-        width: 10rem;
-        padding: .1rem;
-    }
-    /*CV*/
-    .llista{
-        display: grid;
-        grid-template-columns: 1fr;
-     }
-     .llista>ul{
-        padding-left: 1rem;
-     }
-     /*Pàgina contacte*/
-     input[type="text"]{
-        width: 95vw;
-        border: .08rem solid rgb(178, 171, 171);
-    }
-    textarea{
-        width: 95vw;
-        border: .08rem solid rgb(178, 171, 171);
-    }
-    input[type="submit"]{
-        width: 15vw;
-        margin: .1rem auto;
-        border: .1rem solid rgb(96, 94, 94);
-        background-color: #FFFFFF;
-    }
+@media only screen and (max-width: 992px) {
+	body {
+		margin: 0;
+		display: grid;
+		grid-template-areas:
+			'top'
+			'imatge'
+			'text'
+			'peu';
+	}
+	header {
+		height: 1rem;
+	}
+	.cabecera {
+		height: 7rem;
+	}
+	h2 {
+		text-align: center;
+		font-weight: bold;
+	}
+	footer {
+		height: 3rem;
+	}
+	.logos {
+		padding: 0rem;
+	}
+	/*Index*/
+	/*Secció presentació*/
+	.presentacio {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.presentacio_text {
+		margin: 0.5rem;
+	}
+	.presentacio_imatge {
+		justify-self: center;
+	}
+	/*Projectes*/
+	.project > p {
+		padding: 0.5rem;
+		block-size: 1.2rem;
+		text-align: justify;
+	}
+	.project > img {
+		height: 25vw;
+	}
+	.project > button {
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+	}
+	/*Experiencia*/
+	.cat_experiencia > h2 {
+		color: white;
+		margin: 0;
+		padding: 0;
+		padding-top: 0.5rem;
+	}
+	.aficions {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.figura > p {
+		color: #ffffff;
+		font-size: 0.9rem;
+		position: absolute;
+		align-items: center;
+		margin: 7rem 4rem;
+	}
+	.experiencia {
+		gap: 0.05rem;
+	}
+	.figura > img {
+		width: 10rem;
+		padding: 0.1rem;
+	}
+	/*CV*/
+	.llista {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.llista > ul {
+		padding-left: 1rem;
+	}
+	/*Pàgina contacte*/
+	input[type='text'] {
+		width: 95vw;
+		border: 0.08rem solid rgb(178, 171, 171);
+	}
+	textarea {
+		width: 95vw;
+		border: 0.08rem solid rgb(178, 171, 171);
+	}
+	input[type='submit'] {
+		width: 15vw;
+		margin: 0.1rem auto;
+		border: 0.1rem solid rgb(96, 94, 94);
+		background-color: #ffffff;
+	}
 }
-@media only screen and (max-width: 768px){
-    body{
-        margin: 0;  
-        display: grid;
-        grid-template-areas: 
-        'top'
-        'imatge'
-        'text'
-        'peu';
-    }
-    header{
-        height: 1rem;
-    }
-    .cabecera{  
-        height: 7rem;
-    }
-    h2{
-        text-align: center;
-        font-weight: bold;
-    }
-    footer{
-        height: 3rem;
-    }
-    .logos {
-        padding: 0rem;
-    }
-    /*Index*/
-    /*Presentacio*/
-    .presentacio{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .presentacio_text{
-        margin: .5rem;
-    }
-    .presentacio_imatge{
-        justify-self: center;
-    }
-    /*Projectes*/
-    .projectes{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .project{
-        justify-self: center;
-        width: 60vw;
-    }
-    .project>p {
-        padding: .5rem;
-        block-size: 1.2rem;
-        text-align: justify;
-    }
-    .project>img{
-        height: 25vw;
-    }
-    .project>button{
-        margin-bottom: .5rem;
-        padding: .5rem;
-    }
-    /*Experiència*/
-    .cat_experiencia>h2{
-        color: white;
-        margin: 0;
-        padding: 0;
-        padding-top: .5rem;
-    }
-    .experiencia{
-        gap: .05rem;
-    }
-    .figura>p{
-        color: #FFFFFF;
-        font-size: .9rem;
-        position: absolute;
-        align-items: center;
-        margin: 7rem 4rem;
-    }
-    .figura>img{
-        width: 10rem;
-        padding: .1rem;
-    }
-    /*Aficions*/
-    .aficions{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    /*CV*/
-    .llista{
-        display: grid;
-        grid-template-columns: 1fr;
-     }
-     .llista>ul{
-        padding-left: 1rem;
-     }
-     /*Pàgina contacte*/
-     input[type="text"]{
-        width: 95vw;
-        border: .08rem solid rgb(178, 171, 171);
-    }
-    textarea{
-        width: 95vw;
-        border: .08rem solid rgb(178, 171, 171);
-    }
-    input[type="submit"]{
-        width: 15vw;
-        margin: .1rem auto;
-        border: .1rem solid rgb(96, 94, 94);
-        background-color: #FFFFFF;
-    }
+@media only screen and (max-width: 768px) {
+	body {
+		margin: 0;
+		display: grid;
+		grid-template-areas:
+			'top'
+			'imatge'
+			'text'
+			'peu';
+	}
+	header {
+		height: 1rem;
+	}
+	.cabecera {
+		height: 7rem;
+	}
+	h2 {
+		text-align: center;
+		font-weight: bold;
+	}
+	footer {
+		height: 3rem;
+	}
+	.logos {
+		padding: 0rem;
+	}
+	/*Index*/
+	/*Presentacio*/
+	.presentacio {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.presentacio_text {
+		margin: 0.5rem;
+	}
+	.presentacio_imatge {
+		justify-self: center;
+	}
+	/*Projectes*/
+	.projectes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.project {
+		justify-self: center;
+		width: 60vw;
+	}
+	.project > p {
+		padding: 0.5rem;
+		block-size: 1.2rem;
+		text-align: justify;
+	}
+	.project > img {
+		height: 25vw;
+	}
+	.project > button {
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+	}
+	/*Experiència*/
+	.cat_experiencia > h2 {
+		color: white;
+		margin: 0;
+		padding: 0;
+		padding-top: 0.5rem;
+	}
+	.experiencia {
+		gap: 0.05rem;
+	}
+	.figura > p {
+		color: #ffffff;
+		font-size: 0.9rem;
+		position: absolute;
+		align-items: center;
+		margin: 7rem 4rem;
+	}
+	.figura > img {
+		width: 10rem;
+		padding: 0.1rem;
+	}
+	/*Aficions*/
+	.aficions {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	/*CV*/
+	.llista {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.llista > ul {
+		padding-left: 1rem;
+	}
+	/*Pàgina contacte*/
+	input[type='text'] {
+		width: 95vw;
+		border: 0.08rem solid rgb(178, 171, 171);
+	}
+	textarea {
+		width: 95vw;
+		border: 0.08rem solid rgb(178, 171, 171);
+	}
+	input[type='submit'] {
+		width: 15vw;
+		margin: 0.1rem auto;
+		border: 0.1rem solid rgb(96, 94, 94);
+		background-color: #ffffff;
+	}
 }
 /*Media queries*/
-@media only screen and (max-width: 600px){
-    body{
-        margin: 0;  
-        display: grid;
-        grid-template-areas: 
-        'top'
-        'text'
-        'peu';
-    }
-    .cabecera{
-        display: none;
-    }
-    h2{
-        text-align: center;
-        font-weight: bold;
-    }
-    /*Index*/
-    /*Presentacio*/
-    .presentacio{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .presentacio_text{
-        margin: .5rem;
-    }
-    .presentacio_imatge{
-        justify-self: center;
-    }
-    /*Projectes*/
-    .projectes{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .project{
-        justify-self: center;
-        width: 60vw;
-    }
-    .project>p {
-        padding: .5rem;
-        block-size: 1.2rem;
-        text-align: justify;
-    }
-    .project>img{
-        height: 25vw;
-    }
-    .project>button{
-        margin-bottom: .5rem;
-        padding: .5rem;
-    }
-    /*Experiència*/
-    .cat_experiencia>h2{
-        color: white;
-        margin: 0;
-        padding: 0;
-        padding-top: .5rem;
-    }
-    .experiencia{
-        gap: .05rem;
-    }
-    .figura>p{
-        color: #FFFFFF;
-        font-size: .9rem;
-        position: absolute;
-        align-items: center;
-        margin: 7rem 2rem;
-    }
-    .figura>img{
-        width: 6rem;
-        padding: .1rem;
-    }
-    /*Aficions*/
-    .aficions{
-        display: grid;
-        grid-template-columns: 1fr ;
-
-    }
-    /*CV*/
-    .sumari{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .item{
-        padding: 0;  
-        justify-self: center;
-        padding: .1rem;
-    }
-    .item>a{
-        padding:0;
-    }
-    .divisio{
-        padding:.5rem ;
-    }
-    .dades>img{
-        width: 7rem;
-        height: 7rem;
-        border-radius: 50%;
-        place-self: left;
-    }
-    .llista{
-        display: grid;
-        grid-template-columns: 1fr;
-     }
-     .llista>ul{
-        padding-left: 1rem;
-     }
-     /*Pàgina contacte*/
-     input[type="text"]{
-        width: 95vw;
-        border: .08rem solid rgb(178, 171, 171);
-    }
-    textarea{
-        width: 95vw;
-        border: .08rem solid rgb(178, 171, 171);
-    }
-    input[type="submit"]{
-        width: 15vw;
-        margin: .1rem auto;
-        border: .1rem solid rgb(96, 94, 94);
-        background-color: #FFFFFF;
-    }
+@media only screen and (max-width: 600px) {
+	body {
+		margin: 0;
+		display: grid;
+		grid-template-areas:
+			'top'
+			'text'
+			'peu';
+	}
+	.cabecera {
+		display: none;
+	}
+	h2 {
+		text-align: center;
+		font-weight: bold;
+	}
+	/*Index*/
+	/*Presentacio*/
+	.presentacio {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.presentacio_text {
+		margin: 0.5rem;
+	}
+	.presentacio_imatge {
+		justify-self: center;
+	}
+	/*Projectes*/
+	.projectes {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.project {
+		justify-self: center;
+		width: 60vw;
+	}
+	.project > p {
+		padding: 0.5rem;
+		block-size: 1.2rem;
+		text-align: justify;
+	}
+	.project > img {
+		height: 25vw;
+	}
+	.project > button {
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+	}
+	/*Experiència*/
+	.cat_experiencia > h2 {
+		color: white;
+		margin: 0;
+		padding: 0;
+		padding-top: 0.5rem;
+	}
+	.experiencia {
+		gap: 0.05rem;
+	}
+	.figura > p {
+		color: #ffffff;
+		font-size: 0.9rem;
+		position: absolute;
+		align-items: center;
+		margin: 7rem 2rem;
+	}
+	.figura > img {
+		width: 6rem;
+		padding: 0.1rem;
+	}
+	/*Aficions*/
+	.aficions {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	/*CV*/
+	.sumari {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.item {
+		padding: 0;
+		justify-self: center;
+		padding: 0.1rem;
+	}
+	.item > a {
+		padding: 0;
+	}
+	.divisio {
+		padding: 0.5rem;
+	}
+	.dades > img {
+		width: 7rem;
+		height: 7rem;
+		border-radius: 50%;
+		place-self: left;
+	}
+	.llista {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.llista > ul {
+		padding-left: 1rem;
+	}
+	/*Pàgina contacte*/
+	input[type='text'] {
+		width: 95vw;
+		border: 0.08rem solid rgb(178, 171, 171);
+	}
+	textarea {
+		width: 95vw;
+		border: 0.08rem solid rgb(178, 171, 171);
+	}
+	input[type='submit'] {
+		width: 15vw;
+		margin: 0.1rem auto;
+		border: 0.1rem solid rgb(96, 94, 94);
+		background-color: #ffffff;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
